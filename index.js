@@ -26,7 +26,7 @@ setTimeout(() => {
 
   // Redirect after logo animation
   setTimeout(() => {
-    window.location.href = "/PujaPal/landingmain/landing.html";
+    window.location.href = "landingmain/landing.html";
   }, 2500);
 }, 4000);
 
