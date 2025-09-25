@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Puja Pal - Afternoon Pandals</title>
+  <link rel="icon" type="image/png" href="/dashboard/icon.png">
+  <link rel="stylesheet" href="/morning/morninglanding.css">
+</head>
+<body>
+  <!-- Back to Home Button -->
+<a id="home-btn" href="/landingmain/landing.html" style="
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00fff7;
+    background: transparent;
+    text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+">
+    <img src="/logo/pujapallogo.png" alt="Home" style="width:28px; height:28px;">
+    Back to Home
+</a>
+
+<style>
+#home-btn:hover {
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 30px #00fff7;
+    color: #00fff7;
+}
+</style>
+
+  <div id="fire-glow-container"></div>
+  <!-- ticker -->
+
+  <div class="ticker-container">
+    <div id="ww_615bf797827bb" v='1.3' loc='id' a='{"t":"ticker","lang":"en","sl_lpl":1,"ids":["wl628"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+      <a href="https://weatherwidget.org/" id="ww_615bf797827bb_u" target="_blank" rel="noopener">weatherwidget.org</a>
+    </div>
+    <script async src="https://app3.weatherwidget.org/js/?id=ww_615bf797827bb"></script>
+  </div>
+
+  <!-- forecast button -->
+  <div class="forecast-button-container">
+    <button id="showForecastBtn" class="cta">Show Hourly Forecast</button>
+  </div>
+
+  <!-- filter -->
+  <div class="filter-row">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="normal">Normal</button>
+    <button class="filter-btn" data-filter="premium">Premium</button>
+  </div>
+  
+
+
+
+
+
+  <!-- container -->
+  <main id="pandalContainer" class="pandal-container"></main>
+
+  <!-- popup -->
+  <div id="forecastPopup" class="popup">
+    <div class="popup-content">
+      <button class="close-btn" id="closePopup">&times;</button>
+      <div id="ww_d87b4b4ff15ef" v='1.3' loc='id' a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":["wl628"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+        <a href="https://weatherwidget.org/" id="ww_d87b4b4ff15ef_u" target="_blank" rel="noopener">weatherwidget.org</a>
+      </div>
+      <script async src="https://app3.weatherwidget.org/js/?id=ww_d87b4b4ff15ef"></script>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 PujaPal | Made with ❤️ for you!
+  </footer>
+
+  <script src="afternoon.js"></script>
+</body>
+</html>

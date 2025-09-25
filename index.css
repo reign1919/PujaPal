@@ -1,0 +1,100 @@
+/* ---------- Body ---------- */
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d0d0d;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* ---------- Loader ---------- */
+.loader {
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  border-top: 4px solid #ff6f61;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px auto;
+  animation: spin 1.2s linear infinite;
+}
+#loading-text {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 15px;
+  opacity: 1;
+}
+
+/* ---------- Logo Screen ---------- */
+#logo-screen {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d0d0d;
+  z-index: 20;
+}
+.hidden { display: none; }
+.logo-animate {
+  width: 200px;
+  opacity: 0;
+  animation: logoFade 2s forwards, floatLogo 2s ease-in-out infinite;
+}
+
+/* ---------- Fire Glow Particles ---------- */
+#fire-glow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 5;
+}
+.fire-glow {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,152,0,0.9) 0%, rgba(255,64,129,0.4) 70%, transparent 100%);
+  opacity: 0.8;
+  animation: floatParticle 6s linear infinite;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes logoFade {
+  0% { opacity: 0; transform: scale(0.6); }
+  50% { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes floatLogo {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-15px) scale(1.05); }
+  100% { transform: translateY(0) scale(1); }
+}
+@keyframes floatParticle {
+  0% { transform: translateY(100vh) scale(0.5); opacity: 0.5; }
+  50% { transform: translateY(50vh) scale(1); opacity: 0.9; }
+  100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+}

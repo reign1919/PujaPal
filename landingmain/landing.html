@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puja Pal - Durga Puja 2025 Hub</title>
+  <link rel="icon" type="image/png" href="/dashboard/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<body>
+  
+  <div id="fire-glow-container"></div>
+  <link rel="stylesheet" href="home.css">
+
+  <header>
+    <h1>Durga Puja 2025</h1>
+    <p>Everything you need for the festive season</p>
+  </header>
+
+  <div class="button-container">
+    <a href="/emergency/emergency.html" class="btn">Emergency Contacts</a>
+    <a href="/accesibility/acc.html" class="btn">Find nearest</a>
+    <a href="/dashboard/dashboard.html" class="btn">The Pandal Guide</a>
+    <a href="/bonedi/bonedi.html" class="btn">Bonedi Barir Pujo</a>
+    <a href="/insta/gram.html" class="btn">Instagram Worthy!</a>
+    <a href="/template/template.html" class="btn">Instagram templates</a>
+    <a href="/knowmore/dpj2025.html" class="btn">The Kolkata Article</a>
+    <a href="/calendar/calendar.html" class="btn">Daily Puja Calendar</a>
+    <a href="/food/eatndrink.html" class="btn">Let's eat kolkata!</a>
+  </div>
+
+  <footer>
+    &copy; 2025 PujaPal | Made with ❤️ for you!
+  </footer>
+
+  <script>
+    // ---------- Fire Glow Particles ----------
+const container = document.getElementById('fire-glow-container');
+const numParticles = 25;
+
+for (let i = 0; i < numParticles; i++) {
+  const particle = document.createElement('div');
+  particle.classList.add('fire-glow');
+  // Random initial positions
+  particle.style.left = Math.random() * 100 + 'vw';
+  particle.style.top = Math.random() * 100 + 'vh';
+  // Random animation duration
+  particle.style.animationDuration = 4 + Math.random() * 4 + 's';
+  // Random size
+  let size = 4 + Math.random() * 6;
+  particle.style.width = size + 'px';
+  particle.style.height = size + 'px';
+  container.appendChild(particle);
+}
+  </script>
+</body>
+</html>

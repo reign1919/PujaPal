@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puja Pal - Eat & Drink</title>
+  <link rel="icon" type="image/png" href="/dashboard/icon.png">
+  <link rel="stylesheet" href="eatndrink.css">
+</head>
+<body>
+  <!-- Back to Home Button -->
+<a id="home-btn" href="/landingmain/landing.html" style="
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00fff7;
+    background: transparent;
+    text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+">
+    <img src="/logo/pujapallogo.png" alt="Home" style="width:28px; height:28px;">
+    Back to Home
+</a>
+
+<style>
+#home-btn:hover {
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 30px #00fff7;
+    color: #00fff7;
+}
+</style>
+
+  <div id="fire-glow-container"></div>
+  <header class="header">
+    <h1>Eat & Drink</h1>
+    <p>Top spots to enjoy Kolkata's non-veg delights this Durga Puja 2025</p>
+  </header>
+
+  <section class="restaurant-section">
+    <h2>Top Restaurants</h2>
+    <div class="restaurant-container">
+
+      <!-- Arsalan Card -->
+      <div class="restaurant-card" data-name="Arsalan" data-note="Offers a wide range of tandooris and biryanis. High-quality Mughlai and Chinese meals. Can accommodate events with customized Indian catering. 13 branches, dine-in available, with street parking." data-speciality="✓ Mutton Boneless Masala ✓ Mutton Keema ✓ Mutton Rezala ✓ Mutton Dahi ✓ Mutton Arsalan Masala ✓ Mutton Dum Gosht Handy ✓ Mutton Kassa ✓ Mutton Kadai ✓ Chicken Tikka Butter Masala ✓ Chicken Reshmi Butter Masala ✓ Chicken Chap ✓ Chicken Bharta ✓ Chicken Garlic Butter Masala ✓ Chicken Tandoori Butter Masala ✓ Chicken Hariyali Butter Masala ✓ Chicken Achar Butter Masala" data-map="https://www.google.co.in/maps/dir/22.5042169,88.3555372/Arsalan+Restaurant+%26+Caterer+-+Park+Circus">
+        <h3>Arsalan</h3>
+        <p class="note">Tap to expand and see full info</p>
+        <div class="expanded-info">
+          <p class="full-note"></p>
+          <p class="full-speciality"></p>
+          <a class="full-map" href="#" target="_blank">📍 Open in Maps</a>
+        </div>
+      </div>
+
+      <!-- India Restaurant Card -->
+      <div class="restaurant-card" data-name="India Restaurant" data-note="Serving specialty kebabs and biryanis for 40+ years. Extensive menu catering to all palates. Offers a wide range of cuisines for food enthusiasts, with air-conditioned seating. Family-friendly, vegetarian options available. Online orders supported. Known for warm hospitality and top-quality food at affordable prices." data-speciality="✓ Mutton Chap ✓ Mutton Dakbangla ✓ Mutton India Special ✓ Mutton Kadai ✓ Mutton Kasa ✓ Mutton Korma ✓ Mutton Rara Punjabi ✓ Mutton Rezala ✓ Mutton Shahi Korma ✓ Mutton Stew ✓ Mutton Tikya ✓ Chicken Afghani Julian ✓ Chicken Bharta ✓ Chicken Dopiyaza ✓ Chicken India Special ✓ Chicken Kadai ✓ Chicken Kasa ✓ Chicken Kashmiri ✓ Chicken Korma ✓ Chicken Masala" data-map="https://www.google.co.in/maps/dir/22.5042169,88.3555372/India+Restaurant,+Indian+Market">
+        <h3>India Restaurant</h3>
+        <p class="note">Tap to expand and see full info</p>
+        <div class="expanded-info">
+          <p class="full-note"></p>
+          <p class="full-speciality"></p>
+          <a class="full-map" href="#" target="_blank">📍 Open in Maps</a>
+        </div>
+      </div>
+
+      <!-- Jai Hind Dhaba Card -->
+      <div class="restaurant-card" data-name="Jai Hind Dhaba" data-note="Offers authentic north Indian and Chinese dishes. Focus on unique, traditional non-veg flavors using farm-fresh ingredients. Provides dine-in, outdoor seating, delivery, and free parking. Designed for flavorful, aromatic, and affordable meals." data-speciality="✓ Double Egg Tarka ✓ Double Mirchi Egg Tarka ✓ Egg Bhurji ✓ Egg Do Pyaza ✓ Egg Kasha ✓ Egg Masala ✓ Egg Tarka ✓ Butter Chicken Bone ✓ Butter Chicken Bonless ✓ Chicken Bharta ✓ Chicken Butter Masala Bone ✓ Chicken Do Pyaza Boneless ✓ Chicken Saag Boneless ✓ Dahi Chicken Boneless ✓ Handi Chicken Bone ✓ Kadai Chicken Boneless ✓ Mutton Do Pyaza ✓ Mutton Handi ✓ Mutton Kasha ✓ Mutton Keema" data-map="https://www.google.co.in/maps/dir/22.5042169,88.3555372/Jai+Hind+Dhaba">
+        <h3>Jai Hind Dhaba</h3>
+        <p class="note">Tap to expand and see full info</p>
+        <div class="expanded-info">
+          <p class="full-note"></p>
+          <p class="full-speciality"></p>
+          <a class="full-map" href="#" target="_blank">📍 Open in Maps</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+    <!-- Cafes Section -->
+  <section class="cafe-section">
+    <h2>Top Cafes</h2>
+    <div class="cafe-container">
+
+      <!-- Indian Coffee House Card -->
+      <div class="cafe-card" data-name="Indian Coffee House" data-note="Fantastic ambience with cutting-edge decor. Renowned meeting spot for intellectuals and students. Wide range of drinks from hot to cold. Award-winning hospitality, free Wi-Fi. Famous for College Street vibes and spicy, addictive dishes." data-speciality="✓ Special Hot Coffee ✓ Special Cold & Infusion Black Coffee ✓ Hot Coffee & Coffee Cream ✓ Cold Coffee with Cream ✓ Chilli Chicken ✓ Onion Pakkora ✓ Chicken Kabiraji ✓ Afghani Chicken ✓ Chilli Chicken Boneless ✓ Chicken Sweet & Sour ✓ Garlic Chicken ✓ Mutton Afghani ✓ Fish Fry ✓ Mughlai Paratha ✓ Veg Fried Rice" data-map="https://maps.google.co.in/maps/dir/?api=1&destination=Indian+Coffee+House,+15+Bankim+Chatterjee+Street,+College+Square+West+College+Street,+Kolkata,+WB+700073&hl=en">
+        <h3>Indian Coffee House</h3>
+        <p class="note">Tap to expand and see full info</p>
+        <div class="expanded-info">
+          <p class="full-note"></p>
+          <p class="full-speciality"></p>
+          <a class="full-map" href="#" target="_blank">📍 Open in Maps</a>
+        </div>
+      </div>
+
+      <!-- Blue Mug Cafe Card -->
+      <div class="cafe-card" data-name="Blue Mug Cafe" data-note="Beautiful decor with colonial and vintage vibes, fairy lights, kettle lamps. Indoor & outdoor seating, cute swings, relaxing music. Serves breakfast, pastries, cakes, and sizzlers at reasonable prices. Perfect millennial cafe experience with cozy aesthetic and good food." data-speciality="✓ Irish Coffee ✓ Coffee With Milk ✓ Cappuccino ✓ Cafe Latte ✓ Cafe Mocha ✓ Americano ✓ Espresso ✓ Hot Chocolate ✓ Cold Brew ✓ Affogato ✓ Cranberry Coffee ✓ Iced Cappuccino ✓ Oreo Cream Iced Espresso ✓ Cold Coffee ✓ Chicken Steak Sizzler ✓ Chipotle BBQ Wings ✓ Pork Chop Sizzler ✓ Grilled Fish & Tandoori Fish Sizzler ✓ Mixed Seafood Sizzler ✓ Penne Spaghetti ✓ Chicken Lasagne" data-map="https://maps.google.co.in/maps/dir/?api=1&destination=Blue+Mug+Cafe,+243/B+Jodhpur+Park+Road+near+South+City,+Jodhpur+Park,+Kolkata,+WB+700068&hl=en">
+        <h3>Blue Mug Cafe</h3>
+        <p class="note">Tap to expand and see full info</p>
+        <div class="expanded-info">
+          <p class="full-note"></p>
+          <p class="full-speciality"></p>
+          <a class="full-map" href="#" target="_blank">📍 Open in Maps</a>
+        </div>
+      </div>
+
+      <!-- Calcutta 64 Card -->
+      <div class="cafe-card" data-name="Calcutta 64" data-note="Serves Italian fare, sizzlers, drinks, and desserts in a bright white-brick space with quirky posters. Focuses on fresh, healthy, and seasonal dishes. Started small (200 sq. ft.), later expanded to meet demand. High-quality ingredients, freshly prepared. Offers something great for everyone." data-speciality="✓ Cold Brew ✓ Cold Caramel Latte ✓ Cranberry Cold Brew ✓ Litchi Iced Tea ✓ Honey Cold Brew ✓ Irish & Blackberry Cold Brew ✓ Cinna Granate ✓ Lemon Iced Tea ✓ Hazelnut Cold Brew ✓ Pomegranate Iced Tea ✓ Cucumber Lime Iced Tea ✓ Peach & Blackberry Iced Tea ✓ Strawberry Shake ✓ Mango & Chocolate Shake ✓ Pina Colada Shake ✓ Veg & Scrambled Paneer Wrap ✓ Tandoori Paneer Wrap" data-map="https://maps.google.co.in/maps/dir/?api=1&destination=Calcutta+64,+BC-25+2nd+Cross+Rd+BC+Block+Sector+1+Bidhannagar,+Kolkata,+WB+700064&hl=en">
+        <h3>Calcutta 64</h3>
+        <p class="note">Tap to expand and see full info</p>
+        <div class="expanded-info">
+          <p class="full-note"></p>
+          <p class="full-speciality"></p>
+          <a class="full-map" href="#" target="_blank">📍 Open in Maps</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <footer>
+     Courtesy with ❤️ by https://threebestrated.in/
+  </footer>
+  <footer>
+    &copy; 2025 PujaPal | Made with ❤️ for you!
+  </footer>
+  <script src="eatndrink.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PujaPal - Quick Access</title>
+    <link rel="stylesheet" href="acc.css">
+</head>
+<body>
+    <!-- Fire Glow Background -->
+    <div id="fire-glow-container"></div>
+
+  <!-- Back to Home Button -->
+<a id="home-btn" href="/landingmain/landing.html" style="
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00fff7;
+    background: transparent;
+    text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+">
+    <img src="/logo/pujapallogo.png" alt="Home" style="width:28px; height:28px;">
+    Back to Home
+</a>
+
+<style>
+#home-btn:hover {
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 30px #00fff7;
+    color: #00fff7;
+}
+</style>
+
+    <!-- Header -->
+    <header>
+        <h1>Quick Access Hub</h1>
+        <p>Find everything you need near you during Durga Puja!</p>
+    </header>
+
+    <main>
+        <!-- Essentials Section -->
+        <section class="access-section">
+            <h2>Essentials 🛠️</h2>
+            <div class="buttons-grid">
+                <button class="main-btn" onclick="openMap('nearest-toilet')"><span class="btn-text">🚻 Toilet</span><span class="btn-particles"></span></button>
+                <button class="main-btn" onclick="openMap('nearest-pharmacy')"><span class="btn-text">💊 Pharmacy</span><span class="btn-particles"></span></button>
+                <button class="main-btn" onclick="openMap('nearest-hospital')"><span class="btn-text">🏥 Hospital</span><span class="btn-particles"></span></button>
+                <button class="main-btn" onclick="openMap('nearest-chill')"><span class="btn-text">🏞️ Sit & Chill</span><span class="btn-particles"></span></button>
+            </div>
+        </section>
+
+        <!-- Travel Section -->
+        <section class="access-section">
+            <h2>Getting Around 🚗</h2>
+            <div class="buttons-grid">
+                <button class="main-btn" onclick="openMap('nearest-parking')"><span class="btn-text">🅿️ Parking</span><span class="btn-particles"></span></button>
+                <button class="main-btn" onclick="openMap('nearest-metro')"><span class="btn-text">🚇 Metro</span><span class="btn-particles"></span></button>
+                <button class="main-btn" onclick="openMap('nearest-bus')"><span class="btn-text">🚌 Bus Stop</span><span class="btn-particles"></span></button>
+                <button class="main-btn" onclick="openMap('nearest-atm')"><span class="btn-text">🪙 ATM</span><span class="btn-particles"></span></button>
+            </div>
+        </section>
+
+        <!-- Food & Drinks Section -->
+        <section class="access-section">
+            <h2>Food & Drinks 🍴</h2>
+            <div class="buttons-grid">
+                <button class="main-btn" onclick="openMap('nearest-cafe')"><span class="btn-text">☕ Cafe</span><span class="btn-particles"></span></button>
+                <button class="main-btn" onclick="openMap('nearest-restaurant')"><span class="btn-text">🍛 Restaurant</span><span class="btn-particles"></span></button>
+                <button class="main-btn" onclick="openMap('nearest-water')"><span class="btn-text">💧 Drinking Water</span><span class="btn-particles"></span></button>
+                <button class="main-btn" onclick="openMap('nearest-stalls')"><span class="btn-text"></span>🍲 Nearby Stalls<span class="btn-particles"></span></button>
+            </div>
+        </section>
+
+        <!-- Fun & Culture Section -->
+        <section class="access-section">
+            <h2>Fun & Culture 🎉</h2>
+            <div class="buttons-grid">
+                <button class="main-btn" onclick="openMap('nearest-pandal')"><span class="btn-text">🏛️ Pandal</span><span class="btn-particles"></span></button>
+                <button class="main-btn" onclick="openMap('nearest-art')"><span class="btn-text">🎨 Art</span><span class="btn-particles"></span></button>
+                <button class="main-btn" onclick="openMap('nearest-music')"><span class="btn-text">🎶 Live Music</span><span class="btn-particles"></span></button>
+            </div>
+        </section>
+    </main>
+    <!-- Traffic Map Section -->
+
+<section class="access-section">
+  <h2>Live Traffic 🚦</h2>
+  <div class="traffic-quick">
+    <input id="traffic-query" type="search" placeholder="Type city or area (e.g. Park Street, Kolkata)" />
+    <button id="traffic-open">Search Traffic</button>
+  </div>
+  <p class="traffic-note">🌍 See live traffic anywhere in the world - powered by Google Maps.</p>
+</section>
+
+
+
+
+    <footer>
+        &copy; 2025 PujaPal | Made with ❤️ for you!
+    </footer>
+
+    <script src="acc.js"></script>
+</body>
+</html>

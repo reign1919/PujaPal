@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top left, #1a1a1a, #0d0d0d 70%);
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 420px; /* good for phones */
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffb347;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 25px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tour-btn {
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  letter-spacing: 0.5px;
+}
+
+/* Gradients: muted festive tones */
+.tour-btn.morning {
+  background: linear-gradient(135deg, #d35400, #e67e22);
+  color: #fff;
+}
+
+.tour-btn.afternoon {
+  background: linear-gradient(135deg, #b9770e, #f39c12);
+  color: #fff;
+}
+
+.tour-btn.nightlife {
+  background: linear-gradient(135deg, #8e0e00, #1f1c18);
+  color: #fff;
+}
+
+.tour-btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 18px rgba(0,0,0,0.5);
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+  .dashboard-container {
+    max-width: 600px;
+    padding: 40px 30px;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .tour-btn {
+    font-size: 1.2rem;
+    padding: 18px;
+  }
+}
+
+/*Phone*/
+
+/* Background styling for phone screens */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+
+  /* Background image from project directory */
+  background-image: url("./OIP.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  /* Dark overlay for sleek festive vibe */
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: -1;
+}
+
+/* Force 9:16 aspect ratio for main app area */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: calc(100vh * (9 / 16));
+  margin: 0 auto; /* centers horizontally */
+  overflow: hidden;
+}
+
+.tour-btn.checklist {
+  background: linear-gradient(135deg, #00bcd4, #00e5ff);
+  color: #081214;
+}

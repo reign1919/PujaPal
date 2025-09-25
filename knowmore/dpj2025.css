@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+:root {
+  --bg-dark: #0c0c10;
+  --bg-gradient: linear-gradient(135deg, #0c0c10, #16161e);
+  --text-light: #fff;
+  --text-muted: #cbd5e1;
+  --accent1: #ff9800;
+  --accent2: #ff4081;
+  --accent3: #00e5ff;
+  --radius: 20px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: 'Inter', sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-light);
+  line-height: 1.5;
+  overflow-x: hidden;
+  padding-bottom: 60px;
+}
+
+/* Header */
+.dpj-header {
+  text-align: center;
+  padding: 28px 16px 16px;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(12px);
+}
+.dpj-header h1 {
+  font-size: 2rem;
+  margin: 0;
+  text-shadow: 0 4px 14px rgba(0,0,0,0.6);
+}
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* Sections */
+.dpj-section {
+  margin: 18px 10px;
+}
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: var(--accent1);
+  text-align: center;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* Cards */
+.dpj-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 14px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(12px) saturate(150%);
+}
+.dpj-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(255,152,0,0.25);
+}
+.dpj-card h3 {
+  color: var(--accent2);
+  margin: 0 0 6px 0;
+}
+.dpj-card ul {
+  padding-left: 18px;
+  margin: 6px 0;
+}
+.dpj-card ul li {
+  margin-bottom: 4px;
+}
+.tip {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* Footer */
+.dpj-footer {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .dpj-header h1 { font-size: 1.7rem; }
+  .section-title { font-size: 1.2rem; }
+  .dpj-card { padding: 14px; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+/* ---------- Fire Glow Particles ---------- */
+#fire-glow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.fire-glow {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,152,0,0.9) 0%, rgba(255,64,129,0.4) 70%, transparent 100%);
+  opacity: 0.8;
+  animation: floatParticle 6s linear infinite;
+}
+
+@keyframes floatParticle {
+  0% { transform: translateY(100vh) scale(0.5); opacity: 0.5; }
+  50% { transform: translateY(50vh) scale(1); opacity: 0.9; }
+  100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+}

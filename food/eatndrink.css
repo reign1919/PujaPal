@@ -1,0 +1,172 @@
+/* Global / Mobile-first */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+:root {
+  --bg1: #0d0d12;
+  --bg2: #14141a;
+  --glass: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.12);
+  --text: #fff;
+  --muted: #cbd5e1;
+  --accent1: #ff9800;
+  --accent2: #ff4081;
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top left, var(--bg1), var(--bg2));
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+header.header { text-align: center; padding: 24px 16px 12px; }
+header h1 { font-size: 2rem; margin-bottom: 6px; }
+header p { color: var(--muted); font-size: 0.95rem; }
+
+.restaurant-section { width: 94%; max-width: 1080px; margin: 12px auto; }
+.restaurant-section h2 { text-align: center; margin-bottom: 12px; color: var(--accent1); }
+
+.restaurant-container { display: flex; flex-direction: column; gap: 14px; }
+
+.restaurant-card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  position: relative;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(12px) saturate(180%);
+  cursor: pointer;
+  overflow: hidden;
+}
+.restaurant-card h3 { margin: 0 0 6px; font-size: 1.2rem; color: var(--accent2); text-align: center; }
+.restaurant-card .note { font-size: 0.87rem; color: var(--muted); text-align: center; }
+.restaurant-card:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(255,152,0,0.15),0 0 12px rgba(255,64,129,0.12); }
+
+.expanded-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  margin-top: 12px;
+}
+.restaurant-card.active .expanded-info {
+  max-height: 600px; /* enough for all content */
+}
+.expanded-info p { margin: 6px 0; font-size: 0.87rem; color: var(--muted); }
+.expanded-info a { color: var(--accent1); text-decoration: none; font-weight: 700; display:block; margin-top: 8px; text-align:center; }
+.expanded-info a:hover { text-decoration: underline; }
+
+
+
+/* ---------- Fire Glow Particles ---------- */
+#fire-glow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.fire-glow {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,152,0,0.9) 0%, rgba(255,64,129,0.4) 70%, transparent 100%);
+  opacity: 0.8;
+  animation: floatParticle 6s linear infinite;
+}
+
+@keyframes floatParticle {
+  0% { transform: translateY(100vh) scale(0.5); opacity: 0.5; }
+  50% { transform: translateY(50vh) scale(1); opacity: 0.9; }
+  100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+}
+
+/* ---------- Cafe Section ---------- */
+.cafe-section {
+  width: 94%;
+  max-width: 1080px;
+  margin: 32px auto; /* more breathing room */
+}
+
+.cafe-section h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--accent1); /* Yellow heading */
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.cafe-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cafe-card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(12px) saturate(180%);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.cafe-card h3 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+  color: var(--accent2); /* Pink cafe names */
+  text-align: center;
+}
+
+.cafe-card .note {
+  font-size: 0.87rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.cafe-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255,64,129,0.15),
+              0 0 12px rgba(255,152,0,0.12);
+}
+
+/* Expanded info for cafes */
+.cafe-card .expanded-info {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  margin-top: 12px;
+}
+.cafe-card.active .expanded-info {
+  max-height: 600px;
+}
+.cafe-card .expanded-info p {
+  margin: 6px 0;
+  font-size: 0.87rem;
+  color: var(--muted);
+}
+.cafe-card .expanded-info a {
+  color: var(--accent1); /* Keep links yellow for consistency */
+  text-decoration: none;
+  font-weight: 700;
+  display:block;
+  margin-top: 8px;
+  text-align:center;
+}
+.cafe-card .expanded-info a:hover {
+  text-decoration: underline;
+}
+

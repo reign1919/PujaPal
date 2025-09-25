@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Puja Pal - Durga Puja Tours</title>
+  <link rel="icon" type="image/png" href="/dashboard/icon.png" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <!-- Back to Home Button -->
+<a id="home-btn" href="/landingmain/landing.html" style="
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00fff7;
+    background: transparent;
+    text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+">
+    <img src="/logo/pujapallogo.png" alt="Home" style="width:28px; height:28px;">
+    Back to Home
+</a>
+
+<style>
+#home-btn:hover {
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 30px #00fff7;
+    color: #00fff7;
+}
+</style>
+
+  <div class="dashboard-container">
+    <h1 class="title">Durga Puja Pandal Hopping</h1>
+
+    <div class="buttons">
+      <a href="/morning/morninglanding.html" class="tour-btn morning">Morning Tour</a>
+      <a href="/afternoon/afternoon.html" class="tour-btn afternoon">Afternoon Tour</a>
+      <a href="/night/night.html" class="tour-btn nightlife">Nightlife Tour</a>
+
+      <!-- NEW: Checklist button -->
+      <a href="/checklist/checklist.html" class="tour-btn checklist" id="checklistBtn">Checklist</a>
+    </div>
+  </div>
+
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

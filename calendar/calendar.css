@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+:root {
+  --bg1: #0d0d12;
+  --bg2: #121217;
+  --card-bg: rgba(255,255,255,0.05);
+  --glass: rgba(255, 255, 255, 0.06);
+  --border: rgba(255,255,255,0.15);
+  --accent1: #ff9800;
+  --accent2: #ff4081;
+  --text: #fff;
+  --muted: #cbd5e1;
+  --radius: 20px;
+}
+
+* { box-sizing: border-box; margin:0; padding:0; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top left, var(--bg1), var(--bg2));
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+  min-height: 100vh;
+}
+
+/* Header */
+.calendar-header {
+  text-align: center;
+  padding: 20px 14px;
+}
+.calendar-header h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 6px;
+}
+.calendar-header p {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+/* Day Cards */
+.calendar-container {
+  width: 94%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.day-card {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.day-card:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(255,152,0,0.2), 0 6px 15px rgba(0,0,0,0.5);
+}
+
+.day-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 10px;
+}
+.day-date {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--accent1);
+}
+.day-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--accent2);
+}
+
+/* Content */
+.day-content p, .day-content ul {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.day-content ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.day-content li {
+  margin-bottom: 4px;
+}
+
+/* Mobile adjustments */
+@media (max-width:480px){
+  .calendar-header h1 { font-size: 1.5rem; }
+  .day-date { font-size: 0.92rem; }
+  .day-name { font-size: 0.85rem; }
+  .day-content p, .day-content li { font-size: 0.8rem; }
+}
+
+/* ---------- Fire Glow Particles ---------- */
+#fire-glow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.fire-glow {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,152,0,0.9) 0%, rgba(255,64,129,0.4) 70%, transparent 100%);
+  opacity: 0.8;
+  animation: floatParticle 6s linear infinite;
+}
+
+@keyframes floatParticle {
+  0% { transform: translateY(100vh) scale(0.5); opacity: 0.5; }
+  50% { transform: translateY(50vh) scale(1); opacity: 0.9; }
+  100% { transform: translateY(-10vh) scale(0.5); opacity: 0; }
+}

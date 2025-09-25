@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Puja Pal - Pandal Checklist</title>
+  <link rel="icon" type="image/png" href="/dashboard/icon.png">
+  <link rel="stylesheet" href="checklist.css" />
+</head>
+<body>
+  <!-- Back to Home Button -->
+<a id="home-btn" href="/landingmain/landing.html" style="
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00fff7;
+    background: transparent;
+    text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+">
+    <img src="/logo/pujapallogo.png" alt="Home" style="width:28px; height:28px;">
+    Back to Home
+</a>
+
+<style>
+#home-btn:hover {
+    text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7, 0 0 30px #00fff7;
+    color: #00fff7;
+}
+</style>
+
+  <div id="fire-glow-container"></div>
+  <main class="checklist-app">
+    <header class="topbar">
+      <div>
+        <h1>Pandal Checklist</h1>
+        <p class="muted">Tick the pandals you want to visit — premium pandals are highlighted.</p>
+      </div>
+      <div class="top-actions">
+        <button id="selectAll" class="btn small">Select all</button>
+        <button id="deselectAll" class="btn small alt">Clear</button>
+      </div>
+    </header>
+
+    <section class="controls">
+      <input id="searchInput" type="search" placeholder="Search pandal (eg. 23 Pally)..." />
+      <div class="actions-row">
+        <button id="copyBtn" class="btn">Copy list</button>
+        <button id="openMapsBtn" class="btn accent">Open in Maps</button>
+        <button id="downloadBtn" class="btn alt">Download CSV</button>
+      </div>
+    </section>
+
+    <section id="listWrap" class="list-wrap">
+      <ul id="pandalList" class="pandal-list" aria-live="polite"></ul>
+    </section>
+
+    <footer class="footer">
+      <div class="summary">
+        <span id="selectedCount">0</span> selected
+      </div>
+      <div class="help muted">Selections saved locally in your browser</div>
+    </footer>
+  </main>
+  
+  <footer>
+    &copy; 2025 PujaPal | Made with ❤️ for you!
+  </footer>
+  <script src="checklist.js"></script>
+</body>
+</html>
