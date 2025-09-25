@@ -1,4 +1,4 @@
-// Mapping for Google Maps URLs
+// ---------- Mapping for Google Maps URLs ----------
 function openMap(locationType) {
     const locations = {
         // Essentials
@@ -29,46 +29,44 @@ function openMap(locationType) {
     }
 }
 
-// Open a universal Maps URL for a query (Maps URLs - no API key required).
+// ---------- Traffic Search by Query ----------
 document.getElementById('traffic-open').addEventListener('click', () => {
-  const q = document.getElementById('traffic-query').value.trim();
-  if (!q) return alert('Type a city or address first.');
-  // Official Maps URL for a search — works cross-platform.
-  const url = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
-  window.open(url, '_blank');
+    const q = document.getElementById('traffic-query').value.trim();
+    if (!q) return alert('Type a city, address, or destination first.');
+
+    // Use directions URL to show traffic (works on mobile)
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(q)}&travelmode=driving&dir_action=navigate`;
+    window.open(url, '_blank');
 });
 
-// If you also have a JS map on the page, open the current center in a new tab:
+// ---------- Traffic at Current Map Center ----------
 document.getElementById('traffic-open-map').addEventListener('click', () => {
-  // If you have a google map instance 'map', use map.getCenter(); if not, fallback to default coords.
-  let lat = 22.565520, lng = 88.397454; // fallback center
-  try {
-    if (window.map && typeof window.map.getCenter === 'function') {
-      const c = window.map.getCenter();
-      lat = c.lat(); lng = c.lng();
-    }
-  } catch(e){ /* ignore */ }
-  // This URL (open in new tab) will let the user see live traffic and pan anywhere.
-  const url = `https://www.google.com/maps/@${lat},${lng},12z/data=!5m1!1e1`;
-  window.open(url, '_blank');
-});
+    let lat = 22.565520, lng = 88.397454; // fallback coords
+    try {
+        if (window.map && typeof window.map.getCenter === 'function') {
+            const c = window.map.getCenter();
+            lat = c.lat();
+            lng = c.lng();
+        }
+    } catch(e){ /* ignore */ }
 
+    // Open map with traffic overlay centered at the coords
+    const url = `https://www.google.com/maps/@${lat},${lng},15z/data=!3m1!1e3`;
+    window.open(url, '_blank');
+});
 
 // ---------- Fire Glow Particles ----------
 const container = document.getElementById('fire-glow-container');
 const numParticles = 25;
 
 for (let i = 0; i < numParticles; i++) {
-  const particle = document.createElement('div');
-  particle.classList.add('fire-glow');
-  // Random initial positions
-  particle.style.left = Math.random() * 100 + 'vw';
-  particle.style.top = Math.random() * 100 + 'vh';
-  // Random animation duration
-  particle.style.animationDuration = 4 + Math.random() * 4 + 's';
-  // Random size
-  let size = 4 + Math.random() * 6;
-  particle.style.width = size + 'px';
-  particle.style.height = size + 'px';
-  container.appendChild(particle);
+    const particle = document.createElement('div');
+    particle.classList.add('fire-glow');
+    particle.style.left = Math.random() * 100 + 'vw';
+    particle.style.top = Math.random() * 100 + 'vh';
+    particle.style.animationDuration = 4 + Math.random() * 4 + 's';
+    let size = 4 + Math.random() * 6;
+    particle.style.width = size + 'px';
+    particle.style.height = size + 'px';
+    container.appendChild(particle);
 }
